@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宜时记配图大师</title>
+    <style>
+        /* 这里是 CSS 样式 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* 防止出现滚动条 */
+        }
+        #app {
+            width: 100%;
+            height: 100%;
+            background-color: #f5f6f7; /* 加个背景色更好看 */
+        }
+    </style>
+</head>
+<body>  
+    <!-- 容器 -->
+    <div id='app'></div>
+
+    <!-- 引入 SDK 库 -->
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/builder-web-sdk/0.1.1-beta.1/dist/umd/index.js"></script>
+
+    <!-- 初始化脚本 -->
+    <script>
+      new CozeWebSDK.AppWebSDK({
+        // 你的临时令牌
+        token: 'cztei_lcTyOc7lin2tVEZGXAuTNVqyg44KV5B6sVUkG5tmDNIme8vUcixbN78YrZfrYXH5Z',
+        
+        // 你的 Bot ID
+        appId: '7583284674832220201',
+        
+        container: '#app',
+        userInfo: {
+          id: 'user',
+          url: 'https://lf-coze-web-cdn.coze.cn/obj/eden-cn/lm-lgvj/ljhwZthlaukjlkulzlp/coze/coze-logo.png',
+          nickname: 'User',
+        },
+        ui: {
+          className: '',
+          layout: 'pc', // 强制桌面布局，体验更好
+        }
+      });
+    </script>
+</body>
+</html>
